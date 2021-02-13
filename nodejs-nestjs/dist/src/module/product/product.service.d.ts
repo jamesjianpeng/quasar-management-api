@@ -10,6 +10,7 @@ export declare class ProductService implements OnModuleInit {
     constructor(nestjsMdbLibService: NestjsMdbLibService, nestjsRdbLibService: NestjsRdbLibService);
     onModuleInit(): void;
     init(): Promise<void>;
+    getProductDetail(data: any): Promise<any>;
     getProducts(data: any): Promise<{
         list: any[];
         pagination: any;

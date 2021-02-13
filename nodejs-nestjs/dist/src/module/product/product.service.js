@@ -27,6 +27,10 @@ let ProductService = class ProductService {
         const data = { cliKey: 'sz', db: 'quasar-management', col: 'products' };
         this.colUser = await this.nestjsMdbLibService.getCol(data);
     }
+    async getProductDetail(data) {
+        let item = await this.colUser.findOne(data);
+        return item;
+    }
     async getProducts(data) {
         const { pagination = {} } = data;
         let cursor = await this.colUser.find();

@@ -23,6 +23,9 @@ let ProductController = class ProductController {
     getProducts(query) {
         return this.userService.getProducts(query);
     }
+    getProductDetail(query) {
+        return this.userService.getProductDetail(query);
+    }
     addProduct(produc) {
         return this.userService.addProduct(produc);
     }
@@ -34,6 +37,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], ProductController.prototype, "getProducts", null);
+__decorate([
+    common_1.Post('getProductDetail'),
+    __param(0, common_1.Body()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], ProductController.prototype, "getProductDetail", null);
 __decorate([
     common_1.Post('addProduct'),
     __param(0, common_1.Body()),

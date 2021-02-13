@@ -9,6 +9,10 @@ export class ProductController {
   getProducts(@Body() query: any) {
     return this.userService.getProducts(query);
   }
+  @Post('getProductDetail')
+  getProductDetail(@Body() query: any) {
+    return this.userService.getProductDetail(query);
+  }
   @Post('addProduct')
   addProduct(@Body() produc: Product) {
     return this.userService.addProduct(produc);

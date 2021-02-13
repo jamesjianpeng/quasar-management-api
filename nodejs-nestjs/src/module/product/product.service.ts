@@ -23,6 +23,12 @@ export class ProductService implements OnModuleInit {
     this.colUser = await this.nestjsMdbLibService.getCol(data);
   }
 
+  async getProductDetail(data: any) {
+    let item = await this.colUser.findOne(data);
+    return item
+  }
+
+
   async getProducts(data: any) {
     const { pagination = {} } = data
     let cursor = await this.colUser.find();

@@ -7,5 +7,6 @@ export declare class ProductController {
         list: any[];
         pagination: any;
     }>;
+    getProductDetail(query: any): Promise<any>;
     addProduct(produc: Product): Promise<import("../../core/interface").IServerResponse<Product>>;
 }
