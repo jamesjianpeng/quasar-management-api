@@ -1,7 +1,7 @@
 {
     "apps": [{
         "name": "quasar-management-api-nodejs-nestjs",
-        "script": "./dist/main.js",
+        "script": "./dist/src/main.js",
         "exec_mode": "cluster_mode",
         "instances": "2"
 
